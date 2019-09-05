@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Friend Finder | Matches</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 </head>
 <body>
-    
+        <div class="container">
+
+                <!-- jumbotron -->
+                <div class="jumbotron">
+                  <h1 class="text-center">
+                        <i class="fa fa-heart"></i>Friend Finder</h1>
+                  <hr>
+                  <h2 class="text-center">View Matches</h2>
+                  <br>
+            
+                  <div class="text-center">
+                    <a href="/api/new">
+                      <button class="btn btn-lg btn-primary">
+                        <span class="fa fa-list-alt"></span> Make a Profile</button>
+                    </a>
+                    <a href="/">
+                      <button class="btn btn-lg btn-default">
+                        <span class="fa fa-home"></span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+            
+                <!-- jumbotron end -->
+            
+                <!-- repeating elements/ table  -->
+                <div class="row" id="matches">
+                  <div class="card col-lg-12" id="currentReservations">
+                    
+                  </div>
+                </div>
+        </div>
 </body>
+<script>
+      $.get("/api/matches", function (matchList) {
+        if (matchList.length > 0) {
+        clientmatch = matchList.slice(0,5);
+        for (var i = 0; i < clientmatch.length; i++) {
+            var userName = clientmatch[i].userName;
+            var imageLink = clientmatch[i].imageLink;
+
+            let html1 = `
+            <div> User Name: ${userName} </div>
+            <div> :::: ${imageLink} </div>`
+
+            $("#matches").append(`${html1}`);
+        }
+        }
+
+    });
+</script>
 </html>

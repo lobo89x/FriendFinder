@@ -5,6 +5,7 @@ var path = require("path");
 
 var userlist = [];
 var clientArray = {};
+var matchList = [];
 
 // Sets up the Express App
 // =============================================================
@@ -28,20 +29,27 @@ app.get("/api/new", function (req, res) {
   res.sendFile(path.join(__dirname, "new.html"));
 });
 
+// Displays new user addition
+app.get("/api/matches", function (req, res) {
+  res.sendFile(path.join(__dirname, "matches.html"));
+});
+
 // Displays a table list
 app.get("/api/matches/:user", function (req, res) {
     var client = req.params.user;
+    matchList.clear();
   console.log(client);
   for (var i = 0; i < userlist.length; i++) {
     if (chosen === userlist[i].routeName) {
-      clientArray = characters[i];
-      for (var i = 0; i < characters.length; i++) {
-        if (clientArray.q5 === characters[i].q5) {
-            if (clientArray.q4 === characters[i].q4) {
-                if (clientArray.q3 === characters[i].q3) {
-                    if (clientArray.q2 === characters[i].q2) {
-                        if (clientArray.q1 === characters[i].q1) {
-                            return res.json(characters[i]);
+      clientArray = userlist[i];
+      for (var i = 0; i < userlist.length; i++) {
+        if (clientArray.q5 === userlist[i].q5) {
+            if (clientArray.q4 === userlist[i].q4) {
+                if (clientArray.q3 === userlist[i].q3) {
+                    if (clientArray.q2 === userlist[i].q2) {
+                        if (clientArray.q1 === userlist[i].q1) {
+                          matchList.push(userlist[i]);  
+                          return res.json(userlist[i]);
                           }
                       }
                   }
@@ -73,6 +81,8 @@ app.post("/api/new", function (req, res) {
   //   }
   //   );
     res.json(newClient);
+    console.log(userlist);
+    //res.status(200).send("Your input has been accepted");
 });
 
 
