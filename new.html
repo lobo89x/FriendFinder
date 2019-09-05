@@ -180,11 +180,11 @@ $(".submit").on("click", function(event) {
       var newClient = {
         userName: $("#userName").val().trim(),
         imageLink: $("#userImg").val().trim(),
-        q1: $("#q1").val().trim(),
-        q2: $("#q2").val().trim(),
-        q3: $("#q3").val().trim(),
-        q4: $("#q4").val().trim(),
-        q5: $("#q5").val().trim()
+        q1: $('input:radio[name=group1]:checked').val(),
+        q2: $('input:radio[name=group2]:checked').val(),
+        q3: $('input:radio[name=group3]:checked').val(),
+        q4: $('input:radio[name=group4]:checked').val(),
+        q5: $('input:radio[name=group5]:checked').val()
       };
 
       
