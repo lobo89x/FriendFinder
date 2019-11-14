@@ -4,217 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CDNs -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>FriendFinder | New User</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <script src="https://code.jquery.com/jquery.js"></script> <!-- JQ -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  
 </head>
 <body>
-    <container>
-    </container>
-    <div id= "allQuestions">
-    <div class="jumbotron">
+
+
+ <div class = "jumbotron">
+        <div>
             <h1 class="text-center"><i class="fa fa-heart"></i>Friend Finder</h1>
-            <hr>
+        <hr />
             <h2 class="text-center">Enter your info! Your true match awaits!</h2>
-            <br>
+        <br>
     </div>
-        <ol>
-            <!-- preference questions -->
-            <div class="card-body">
-                <form role="form">
-                        <div class="row">
-                            
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="form-group">
-                          <label for="userName">Name</label>
-                          <input type="text" class="form-control" id="userName" style="width: 25%;">
-                        </div>
-                        <div class="form-group">
-                          <label for="userImg">Img</label>
-                          <input type="text" class="form-control" id="userImg" style="width: 25%;">
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                        </div>
-                    <div id="preferences"> 
-                    <div class="row">
-                        <div class="col-lg-2"></div>
-                        <div class="col-lg-8">
-                            <h2>Preferences:</h2>
-                        </div>
-                        <div class="col-lg-2"></div>
-                    </div>
-                            
-                            <div class="row">
-                                            
-                                <div class="col-lg-2"></div>
-                                <div class="col-lg-8">
-                                    <div class="questions" id="q1"> You are very socialble:</div>
-                                </div>
-                                <div class="col-lg-2"></div>
+    </div>
+            <div class = "card" id ="survey"> 
+                <h2 class = "heading">Survey Questions</h2>
+                                
+                <ul>
+                    <li><h3 class = "questionsMain"> I am a reserved person. 
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q1">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                    <li><h3 class = "questionsMain"> I trust other people.
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q2">  
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                    <li><h3 class = "questionsMain"> I tend to be lazy. 
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q3">  
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                        </h3></li>
+                    <li><h3 class = "questionsMain"> I am reliable.
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q4">  
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                    <li><h3 class = "questionsMain">I am a true romantic. 
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q5">  
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                    <li><h3 class = "questionsMain"> I am sociable.
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q6">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                        <li><h3 class = "questionsMain"> I tend to find fault with others.
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q7"> 
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                        <li><h3 class = "questionsMain"> I do my job well.
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q8"> 
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                        </h3></li>
+                    <li><h3 class = "questionsMain"> I get nervous easily.
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q9"> 
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                    <li><h3 class = "questionsMain"> I have an active imagination.
+                        <select data-placeholder= ""  class="chosen-select" name="" id="q10"> 
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Slightly Agree) </option>
+                            <option value="5">5 (Agree)</option>
+                        </select> 
+                    </h3></li>
+                </ul>
+                <br />
+                </div>
+                <br />
+                <hr />
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id = "submit"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+                </button>
+                <br />
+          <br />
+                <div id="resultsModal" class= "modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div  class="modal-content">
+                            <div  class="modal-header">
+                                <h2 class="modal-title"><strong> Best Match </strong></h2>
                             </div>
-                            <!-- q1 menu -->
-                            <div class="row">
-                                <div class="col-lg-2"></div>
-                                <div class="col-lg-8">
-                                    <div class="btn-group mr-3" role="group" aria-label="First group">
-                                        <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=1 class="custom-control-input"  id="q1" name="group1">1</input></div>
-                                        <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=2 class="custom-control-input"  id="q1" name="group1">2</input></div>
-                                        <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=3 class="custom-control-input"  id="q1" name="group1">3</input></div>
-                                        <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=4 class="custom-control-input"  id="q1" name="group1">4</input></div>
-                                        <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=5 class="custom-control-input"  id="q1" name="group1">5</input></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2"></div>
+                             <div class="modal-body">
+                                <h2 id="matchName"></h2>
+                                <img id="matchImg" src="" alt="User does not have a photo, or it could not be loaded"/>
+                            </div>                            
+                            <div class="modal-footer">
+                                <button type="button" class = "btn btn-default" data-dismiss="modal"> Close
+                                </button>
                             </div>
-                            <li></li>
+                        </div>
                     </div>
+                </div> 
+                
+        <script type = "text/javascript" >
+            $("#submit").on("click", function(){
+                
+                
+                    let userData = {
+                        q1: $("#q1").val(),
+                        q2: $("#q2").val(),
+                        q3: $("#q3").val(),
+                        q4: $("#q4").val(),
+                        q5: $("#q5").val(),
+                        q6: $("#q6").val(),
+                        q7: $("#q7").val(),
+                        q8: $("#q8").val(),
+                        q9: $("#q9").val(),
+                        q10: $("#q10").val()
+                        
+                    }; 
+                    let currentURL = window.location.origin;
+                    $.post("/api/new", userData, function (matches){
+                        console.log(matches);
+                        $("#matchName").text(matches.userName);
+                        $("#matchImg").attr("src", matches.imageLink);
+                        $("#resultsModal").modal("toggle");
+                    })
+                
+            });
+        </script>
 
-                  
-                  <!-- q2 start -->
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="questions" id="q2"> You would rather stay in:                </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="btn-group mr-2" role="group" aria-label="First group">
-                            <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=1 class="custom-control-input"  id="q2" name="group2">1</input></div>
-                            <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=2 class="custom-control-input"  id="q2" name="group2">2</input></div>
-                            <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=3 class="custom-control-input"  id="q2" name="group2">3</input></div>
-                            <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=4 class="custom-control-input"  id="q2" name="group2">4</input></div>
-                            <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=5 class="custom-control-input"  id="q2" name="group2">5</input></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-                <li></li>
-                <!-- q3 start -->
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="questions" id="q3"> Sitting quietly toether counts as doing somethign together:          </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="btn-group mr-2" role="group" aria-label="First group">
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=1 class="custom-control-input"  id="q3" name="group3">1</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=2 class="custom-control-input"  id="q3" name="group3">2</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=3 class="custom-control-input"  id="q3" name="group3">3</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=4 class="custom-control-input"  id="q3" name="group3">4</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=5 class="custom-control-input"  id="q3" name="group3">5</input></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-                <li></li>      
-                <!-- q4 start-->
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="questions" id="q4"> You are an active outdooes person:</div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="btn-group mr-2" role="group" aria-label="First group">
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=1 class="custom-control-input"  id="q4" name="group4">1</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=2 class="custom-control-input"  id="q4" name="group4">2</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=3 class="custom-control-input"  id="q4" name="group4">3</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=4 class="custom-control-input"  id="q4" name="group4">4</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=5 class="custom-control-input"  id="q4" name="group4">5</input></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-                <li></li>
-                <!-- q5 start-->
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="questions" id="q5"> You like animals:</div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
-                        <div class="btn-group mr-2" role="group" aria-label="First group">
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=1 class="custom-control-input"  id="q5" name="group5">1</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=2 class="custom-control-input"  id="q5" name="group5">2</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=3 class="custom-control-input"  id="q5" name="group5">3</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=4 class="custom-control-input"  id="q5" name="group5">4</input></div>
-                              <div class="custom-control custom-radio custom-control-inline"> <input type="radio" value=5 class="custom-control-input"  id="q5" name="group5">5</input></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>    
-                                      <!-- q5 checkboxes -->
-                                  
-                              </div>
-            </form>
-        </div>
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
-                <button type="submit" class="btn btn-primary submit" style="width: 10%" data-toggle="modal" data-target="#match">Submit</button>
-            </div>
-            <div class="col-lg-2"></div>
-        </div>
-
-        <!-- class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" -->
-        <div class="modal fade" id="match" tabindex="-1" role="dialog" aria-labelledby="match" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-                    </body>
-<script>
-$(".submit").on("click", function(event) {
-      event.preventDefault();
-      var newClient = {
-        userName: $("#userName").val().trim(),
-        imageLink: $("#userImg").val().trim(),
-        q1: $('input:radio[name=group1]:checked').val(),
-        q2: $('input:radio[name=group2]:checked').val(),
-        q3: $('input:radio[name=group3]:checked').val(),
-        q4: $('input:radio[name=group4]:checked').val(),
-        q5: $('input:radio[name=group5]:checked').val()
-      };
-
-      
-      $.post("/api/new", newClient)
-        .then(function(data) {
-          console.log("new.html", data);
-          alert("Adding user...");
-          window.location = ''
-        });
-    });
-</script>
+    </body>
 </html>
